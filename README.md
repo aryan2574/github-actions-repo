@@ -1,2 +1,2 @@
 # github-actions-repo
-Rough work related to github actions learning
+Rough work related to GitHub actions learning

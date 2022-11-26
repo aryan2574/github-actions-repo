@@ -1,0 +1,28 @@
+# Name of the action
+name: Action 1 - Run on ubuntu-latest
+
+# Trigger the action on push
+on : push
+
+# List of jobs
+jobs:
+  # Name of the job
+  test-action-1:
+    # Operating system to run on
+    runs-on: ubuntu-latest
+    # Steps to execute
+    steps:
+      # Name of the step
+      - name: Checkout
+        # Action to execute
+        uses: actions/checkout@v3
+      # Name of the step
+      - name: Print Hello World
+        # Action to execute
+        run : echo "Hello World"
+      # Name of the step
+      - name : Print Node and NPM version
+        # Action to execute
+        run : |
+          node -v
+          npm -v
