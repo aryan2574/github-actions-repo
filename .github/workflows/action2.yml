@@ -7,7 +7,7 @@ on : [push]
 # List of Jobs
 jobs:
   Run-Python-Commands:
-    runs-on: [ubuntu-latest,macos-latest,windows-latest]
+    runs-on: [ubuntu-latest]
     steps:
       - name: Checkout
         uses: actions/checkout@v3
@@ -16,3 +16,6 @@ jobs:
           import platform
           print(platform.processor())
           shell : python
+      - name: Install Python
+        uses: actions/setup-python@v2
+        run: python -c "print('Hello World - Python Compiler')"
