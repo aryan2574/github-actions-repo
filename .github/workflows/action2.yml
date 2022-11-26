@@ -19,10 +19,10 @@ jobs:
         run: |
           import platform
           print(platform.processor())
-          shell : python
+        shell : python
 
       - name: Install Python
         uses: actions/setup-python@v2
-        
+
       - name: Print Hello World using python compiler
         run: python -c "print('Hello World - Python Compiler')"
