@@ -1,0 +1,18 @@
+# Name of the action
+name : Python Actions
+
+# Trigger the action on event
+on : [push]
+
+# List of Jobs
+jobs:
+  Run-Python-Commands:
+    runs-on: [ubuntu-latest,macos-latest,windows-latest]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Install Platform Module - Python
+        run: |
+          import platform
+          print(platform.processor())
+          shell : python
