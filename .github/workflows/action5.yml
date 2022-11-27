@@ -8,4 +8,4 @@ jobs:
       - name: JS output action
         uses: actions/hello-world-javascript-action@main
         with:
-          who-to-greet: 'Ayush'
+          who-to-greet: Ayush
