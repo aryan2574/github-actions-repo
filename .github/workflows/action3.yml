@@ -5,7 +5,7 @@ name: Multiple jobs
 on: push
 jobs:
   run-shell-commands:
-    runs-on: ubuntu_latest
+    runs-on: ubuntu-latest
     steps:
       - name : echo a string
         run: echo "Hello World!"
@@ -15,7 +15,7 @@ jobs:
           node -v
 
   run-window-commands:
-    runs-on: windows_latest
+    runs-on: windows-latest
     steps:
       - name: Directory Powershell
         run: Get-Location

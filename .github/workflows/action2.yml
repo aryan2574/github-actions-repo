@@ -2,7 +2,7 @@
 name : Python Actions
 
 # Trigger the action on event
-on : pull_request
+on : push
 
 # List of Jobs
 jobs:
