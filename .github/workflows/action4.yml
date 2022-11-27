@@ -1,7 +1,8 @@
 # Two jobs will run : One after another
+# Keyword used : uses: another_job_name || [another_jobs1,another_jobs2]
 
 name: Multiple jobs - runs one after another
-on: push
+on: pull_request
 jobs:
   run-shell-commands:
     runs-on: ubuntu-latest

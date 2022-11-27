@@ -1,0 +1,11 @@
+# Output from actions
+name: Output action
+on: push
+jobs:
+  output actions:
+    runs-on: ubuntu-latest
+    steps:
+      - name: JS output action
+        uses: actions/hello-world-javascript-action@main
+        with:
+          who-to-greet: 'Ayush'
