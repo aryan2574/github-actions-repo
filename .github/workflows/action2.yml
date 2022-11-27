@@ -2,27 +2,35 @@
 name : Python Actions
 
 # Trigger the action on event
-on : [push]
+on : pull_request
 
 # List of Jobs
 jobs:
   Run-Python-Commands:
-
+    # Operating system to run on
     runs-on: [ubuntu-latest]
 
+    # Steps to execute
     steps:
 
+      # Name of the step
+      # Action to execute - Checkout our current repository
       - name: Checkout
         uses: actions/checkout@v3
 
+      # Install Python - Platform Module
       - name: Install Platform Module - Python
+        # Import the module and print the version
         run: |
           import platform
           print(platform.processor())
+        # Set the shell to bash
         shell : python
 
+      # Install Python - Using action defined in the marketplace
       - name: Install Python
         uses: actions/setup-python@v2
 
+      # Print using python compiler
       - name: Print Hello World using python compiler
         run: python -c "print('Hello World - Python Compiler')"

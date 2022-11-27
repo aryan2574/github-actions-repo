@@ -1,0 +1,24 @@
+# Run multiple jobs on different virtual machines
+# Both jobs will run together
+
+name: Multiple jobs
+on: push
+jobs:
+  run-shell-commands:
+    runs-on: ubuntu_latest
+    steps:
+      - name : echo a string
+        run: echo "Hello World!"
+      - name: Multiline script
+        run: |
+          npm -v
+          node -v
+
+  run-window-commands:
+    runs-on: windows_latest
+    steps:
+      - name: Directory Powershell
+        run: Get-Location
+      - name: Current Directory - Bas
+        run: pwd
+        shell: bash
