@@ -1,0 +1,21 @@
+# Two jobs will run : One after another
+
+name: Multiple jobs - runs one after another
+on: push
+jobs:
+  run-shell-commands:
+    runs-on: ubuntu_latest
+    steps:
+      - name: echo a string
+        run: echo "Hello World"
+      - name: multiline scripts
+        run: |
+          npm -v
+          node -v
+
+  run-windows-commands:
+    runs-on: windows_latest
+    steps:
+      - name: Print Directory powershell
+        needs: ["run-shell-commands"]
+        run: Get-Location
