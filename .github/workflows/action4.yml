@@ -14,7 +14,6 @@ jobs:
           node -v
 
   run-windows-commands:
-    runs-on: windows-latest
     steps:
       - name: Print Directory powershell
         needs: run-shell-commands
