@@ -15,7 +15,7 @@ jobs:
 
   run-windows-commands:
     runs-on: windows-latest
+    needs: ["run-shell-commands"]
     steps:
       - name: Print Directory powershell
-        needs: ["run-shell-commands"]
         run: Get-Location
