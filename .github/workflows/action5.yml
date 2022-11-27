@@ -2,7 +2,7 @@
 name: Output action
 on: push
 jobs:
-  output actions:
+  output_actions:
     runs-on: ubuntu-latest
     steps:
       - name: JS output action
