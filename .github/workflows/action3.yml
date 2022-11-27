@@ -2,7 +2,7 @@
 # Both jobs will run together
 
 name: Multiple jobs
-on: push
+on: pull_request
 jobs:
   run-shell-commands:
     runs-on: ubuntu-latest
