@@ -1,0 +1,28 @@
+# Clone our repo in the virtual machine and check for files
+name: clone and check for files
+on: push
+jobs:
+  clone_the_repo:
+    runs-on: ubuntu-latest
+    steps:
+      - name: List all files
+        run: |
+          pwd
+          ls -a
+
+      - name: Clone our repo
+        uses: actions/checkout@v2
+
+      - name: List files after cloning
+        run: |
+          pwd
+          ls -a
+
+      - name: List files and print repo details
+        run: |
+          pwd
+          ls -a
+          echo $GITHUB_SHA
+          echo $GITHUB_REPOSITORY
+          echo $GITHUB_WORKSPACE
+          echo "${{github.token}}"
