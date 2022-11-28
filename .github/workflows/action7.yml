@@ -17,15 +17,26 @@ jobs:
           pwd
           ls -a
 
-      - name: Go to workflow dir
-        run: cd .github/workflows
+      - name: Go to test folder
+        run: |
+          cd test
+          pwd
+          ls -a
+
+      - name: Create another folder and create a file
+        run: |
+          mkdir test2
+          touch tes2.html
 
       - name: Show files
         run: |
           pwd ls -a
 
       - name: Create new folder
-        run: mkdir work2
+        run: |
+          cd ..
+          pwd
+          mkdir hello
 
       - name: Show files
         run: |
