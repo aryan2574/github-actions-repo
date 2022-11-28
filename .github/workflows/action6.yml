@@ -1,6 +1,6 @@
 # Clone our repo in the virtual machine and check for files
 name: clone and check for files
-on: push
+on: pull_request
 jobs:
   clone_the_repo:
     runs-on: ubuntu-latest
