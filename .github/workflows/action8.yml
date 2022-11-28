@@ -3,7 +3,7 @@ name: Automatic workflow
 on:
   schedule:
     - cron: "* * * * *" # Run every minute
-  push:
+  pull_request:
     branches:
       - main
       - master
