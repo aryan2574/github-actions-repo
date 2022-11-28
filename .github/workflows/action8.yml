@@ -1,0 +1,25 @@
+# Run automatic workflow
+name: Automatic workflow
+on:
+  schedule:
+    -cron: "* * * * *" # Run every minute
+  push:
+    branches:
+      - main
+      - master
+      - develop
+
+jobs:
+  automatic-workflow:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Print Hello World
+        run: echo "Hello World"
+
+      - name: Print Node and NPM version
+        run: |
+          node -v
+          npm -v

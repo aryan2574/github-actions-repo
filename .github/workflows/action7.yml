@@ -1,5 +1,7 @@
 name: Show files of workflows dir
-on: push
+
+on: pull_request
+
 jobs:
   show-files:
     runs-on: ubuntu-latest
