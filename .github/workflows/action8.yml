@@ -2,7 +2,7 @@
 name: Automatic workflow
 on:
   schedule:
-    -cron: "* * * * *" # Run every minute
+    - cron: "* * * * *" # Run every minute
   push:
     branches:
       - main
