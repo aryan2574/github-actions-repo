@@ -1,8 +1,8 @@
 # Run automatic workflow
 name: Automatic workflow
 on:
-  schedule:
-    - cron: "* * * * *" # Run every minute
+#  schedule:
+#    - cron: "* * * * *" # Run every minute
   pull_request:
     branches:
       - main

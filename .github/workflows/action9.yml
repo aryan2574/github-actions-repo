@@ -1,0 +1,19 @@
+name: Action workflow - push to master
+on:
+  push:
+    branches:
+      - main  # Only run when pushes to master
+      - 'feature/*' #matches anything starts with - feature/a
+      - 'feature/**' #matches anything with feature/feat/a
+      - '!feature/feat' #ignore this branch
+    tags:
+      - v1.*
+#    paths:
+#      - '**.js'
+
+jobs:
+  show_files:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
