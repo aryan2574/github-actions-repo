@@ -2,13 +2,19 @@ name: Check node v and install node
 on: push
 jobs:
   node-version:
-    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        os: [macos-latest, ubuntu-latest, windows-latest]
+        node_version: [6,8,10]
+      fail-fast: true  #if false, each job will run independently of the result of other jobs
+      max-parallel: 2  #max parallel process
+    runs-on: ${{matrix.os}}
     steps:
       - name: log current node version
         run: node -v
       - name: install Node version 6
         uses: actions/setup-node@v1
         with:
-          node-version: 6
+          node-version: ${{matrix.node_version}}
       - name: log node version
         run: node -v
