@@ -1,5 +1,6 @@
+# It will run total 9 jobs : Every step for every node version and on every os
 name: Check node v and install node
-on: push
+on: pull_request
 jobs:
   node-version:
     strategy:
