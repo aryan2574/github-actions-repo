@@ -1,6 +1,6 @@
 name: Action workflow - push to master
 on:
-  push:
+  pull_request:
     branches:
       - main  # Only run when pushes to master
       - 'feature/*' #matches anything starts with - feature/a
