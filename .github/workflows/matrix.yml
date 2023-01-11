@@ -1,0 +1,14 @@
+name: Check node v and install node
+on: push
+jobs:
+  node-version:
+    runs-on: ubuntu-latest
+    steps:
+      - name: log current node version
+        run: node -v
+      - name: install Node version 6
+        uses: actions/setup-node@v1
+        with:
+          node-version: 6
+      - name: log node version
+        run: node -v

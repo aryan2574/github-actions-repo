@@ -1,5 +1,5 @@
 name: Decrypt ENV file
-on: push
+on: pull_request
 jobs:
   decrypt:
     runs-on: ubuntu-latest
